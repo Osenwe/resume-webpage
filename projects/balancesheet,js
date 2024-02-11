@@ -224,6 +224,9 @@ function reset() {
     let inputElements = document.getElementsByTagName("input");
 
     for (let i = 0; i < inputElements.length; i++) {
+        if (inputElements[i].id !== "resetButton"){
         inputElements[i].value = 0;
+        }
     }
+
 }
