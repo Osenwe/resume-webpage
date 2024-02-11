@@ -219,3 +219,11 @@ function balanced() {
 
 
 }
+
+function reset() {
+    let inputElements = document.getElementsByTagName("input");
+
+    for (let i = 0; i < inputElements.length; i++) {
+        inputElements[i].value = 0;
+    }
+}
