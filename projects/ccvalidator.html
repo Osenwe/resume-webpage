@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Andrew Benyeogor Credit Card Validator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="gradimg.ico" type="image/x-icon">
+        <link rel="stylesheet" href="portfolio.css" type="text/css">
+        
+    </head>
+
+    <body>
+        <div id="container">
+        <div class="w3-container w3-padding-64 w3-center">
+            <h2>Andrew Benyeogor Credit Card Validator</h2>
+            <form class="w3-container" action="/validate" method="POST">
+                <label class="w3-text-blue"><b>Enter a test credit card number:</b></label>
+                <input id="cardNo" onmouseover="colorChange()" class="w3-input w3-border" type="text" placeholder="Please Enter any of the Test Card Number Below" value="" name="cc_number" required>
+                <input type="button" onclick="clickValidate()" class="buttons w3-btn w3-blue w3-margin-top" value="Validate"> </br>
+                <input type="text" id="result" class="w3-btn w3-blue w3-margin-top" value="Result Appears Here!!" readonly>
+            </form>
+            
+            <div class="w3-container w3-margin-top">
+                <h3>Test Samples:</h3>
+                <p><strong>Correct Credit Card Numbers:</strong></p>
+                <ul>
+                    <li>Visa: 4111111111111111</li>
+                    <li>Mastercard: 5555555555554444</li>
+                    <li>American Express: 378282246310005</li>
+                </ul>
+                <p><strong>Incorrect Credit Card Numbers:</strong></p>
+                <ul>
+                    <li>Invalid length: 123456789012345</li>
+                    <li>Invalid prefix: 1234567890123456</li>
+                    <li>Invalid Luhn check: 4111111111111112</li>
+                </ul>
+            </div>
+    
+            <div class="w3-container w3-margin-top">
+                <h3>Luhn Algorithm:</h3>
+                <p>Here is an image explaining the Luhn algorithm:</p>
+                <!-- Add your image here -->
+                <img src="luhnAlgo.png" alt="Luhn Algorithm Codecademy" title="Thanks to Codecademy for picture" style="max-width: 100%;">
+            </div>
+        </div>
+        <script src="portfolio.js"></script>
+    </div>
+    </body>
+</html>
