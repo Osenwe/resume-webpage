@@ -1,1 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Balance Sheet</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        /* Custom CSS for balance sheet layout */
+        .balance-sheet-table {
+            margin-top: 20px;
+        }
+        .balance-sheet-table th, .balance-sheet-table td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-container">
+        <h2 class="w3-center">Andrew Benyeogor Simple Balance Sheet</h2>
+        <div class="w3-responsive">
+            <table class="w3-table-all balance-sheet-table">
+                <thead>
+                    <tr class="w3-light-grey">
+                        <th><input id="resetButton" onclick="reset()" class="w3-input w3-border" type="text"  value="RESET" name="cc_number"></th>
+                        <th>Y2020</th>
+                        <th>Y2021</th>
+                        <th>Y2022</th>
+                        <th>Y2023</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr class="w3-light-grey">
+                        <th colspan="5">All figures in USD thousands unless stated</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr class="w3-light-grey">
+                        <th colspan="5">ASSETS</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr class="w3-light-grey">
+                        <th colspan="5">Current Assets</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cash</td>
+                        <td><input id="cash1" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tcay1 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="cash2" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tcay2 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="cash3" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tcay3 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="cash4" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tcay4 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                    </tr>
+                    <tr>
+                        <td>Accounts Receivable</td>
+                        <td><input id="ar1" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tcay1 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ar2" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tcay2 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ar3" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tcay3 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ar4" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tcay4 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                    </tr>
+                    <tr>
+                        <td>Inventory</td>
+                        <td><input id="inv1" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tcay1 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="inv2" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tcay2 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="inv3" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tcay3 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="inv4" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tcay4 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                    </tr>
+                    <tr>
+                        <td><b>Total Current Assets</b></td>
+                        <td><input id="tca1"  class="w3-input w3-border" type="number"  value="" name="cc_number" readonly></td>
+                        <td><input id="tca2"  class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="tca3"  class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="tca4"  class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+
+                <thead>
+                    <tr class="w3-light-grey">
+                        <th colspan="5">Non Current Assets</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Property Plant and Equipment</td>
+                        <td><input id="ppe1" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tncay1 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ppe2" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tncay2 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ppe3" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tncay3 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ppe4" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tncay4 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                    </tr>
+                    <tr>
+                        <td>Accumulated Depreciation - PPE</td>
+                        <td><input id="acppe1" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tncay1 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="acppe2" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tncay2 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="acppe3" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tncay3 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="acppe4" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="tncay4 w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                    </tr>
+                    <tr>
+                        <td>Net Carrying Value</td>
+                        <td><input id="NCV1" class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="NCV2" class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="NCV3" class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="NCV4" class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><b>Total Assets</b></td>
+                        <td><input id="TA1" class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="TA2" class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="TA3" class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="TA4" class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+
+                <thead>
+                    <tr class="w3-light-grey">
+                        <th colspan="5">LIABILITIES</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr class="w3-light-grey">
+                        <th colspan="5">Current Liabilities</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Accounts Payable</td>
+                        <td><input id="ap1" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ap2" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ap3" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ap4" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                    </tr>
+                    <tr>
+                        <td>Unearned Revenue</td>
+                        <td><input id="ur1" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ur2" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ur3" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ur4" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                    </tr>
+                    <tr>
+                        <td><b>Total Current Liabilities</b></td>
+                        <td><input id="TCL1" class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="TCL2" class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="TCL3" class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="TCL4" class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                    </tr>
+
+                    <tr>
+                        <td>Long Term Debt</td>
+                        <td><input id="ltd1" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ltd2" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ltd3" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ltd4" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Total Liabilities</b></td>
+                        <td><input id="TL1"  class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="TL2"  class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="TL3"  class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="TL4"  class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                    </tr>
+                    
+                    <thead>
+                        <tr class="w3-light-grey">
+                            <th colspan="5">Shareholder's Equity</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Equity Capital</td>
+                        <td><input id="ec1" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ec2" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ec3" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        <td><input id="ec4" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>Retained Earnings</td>
+                            <td><input id="re1" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                            <td><input id="re2" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                            <td><input id="re3" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                            <td><input id="re4" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="w3-input w3-border" type="text"  value="0" name="cc_number" required></td>
+                        </tr>
+                        <tr>
+                            <td><b>Total Shareholder Equity</b></td>
+                            <td><input id="TSE1" class="w3-input w3-border" type="text"  value="0" name="cc_number" readonly></td>
+                            <td><input id="TSE2" class="w3-input w3-border" type="text"  value="0" name="cc_number" readonly></td>
+                            <td><input id="TSE3" class="w3-input w3-border" type="text"  value="0" name="cc_number" readonly></td>
+                            <td><input id="TSE4" class="w3-input w3-border" type="text"  value="0" name="cc_number" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><b>Total Liabilities and Shareholder Equity</b></td>
+                            <td><input id="TLS1"  class="w3-input w3-border" type="text"  value="0" name="cc_number" readonly></td>
+                            <td><input id="TLS2"  class="w3-input w3-border" type="text"  value="0" name="cc_number" readonly></td>
+                            <td><input id="TLS3"  class="w3-input w3-border" type="text"  value="0" name="cc_number" readonly></td>
+                            <td><input id="TLS4"  class="w3-input w3-border" type="text"  value="0" name="cc_number" readonly></td>
+                        </tr>
+    
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><b>EQUATION BALANCED</b></td>
+                        <td><input id="bal1"  class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="bal2"  class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="bal3"  class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                        <td><input id="bal4"  class="w3-input w3-border" type="text"  value="" name="cc_number" readonly></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script src="balanceSheet.js"></script>
+</body>
+</html>
 
