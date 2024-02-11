@@ -229,4 +229,9 @@ function reset() {
         }
     }
 
+    for (let key in inputItems) {
+        if (inputItems.hasOwnProperty(key)) {
+            inputItems[key] = "0";
+        }
+      }
 }
