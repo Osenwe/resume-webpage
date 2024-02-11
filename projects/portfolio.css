@@ -45,3 +45,12 @@ a:active, .buttons:active {
 li{
     list-style-type: none;
 }
+
+/* Balance sheet styles */
+.balance-sheet-table {
+            margin-top: 20px;
+        }
+.balance-sheet-table th, .balance-sheet-table td {
+          padding: 8px;
+          text-align: left;
+        }
